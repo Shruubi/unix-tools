@@ -3,6 +3,8 @@ CFLAGS=-Iincludes/ -g -Wall -O3
 SRC=./src
 BIN=./bin
 
+all: ls touch cat
+
 clean:
 	rm -rf $(BIN)/*
 
