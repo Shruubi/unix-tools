@@ -11,3 +11,6 @@ ls:
 
 touch: 
 	$(CC) $(SRC)/touch/main.c -o $(BIN)/touch $(CFLAGS)
+
+cat:
+	$(CC) $(SRC)/cat/main.c -o $(BIN)/cat $(CFLAGS)
