@@ -3,7 +3,7 @@ CFLAGS=-Iincludes/ -g -Wall -O3
 SRC=./src
 BIN=./bin
 
-all: ls touch cat
+all: ls touch cat cp
 
 clean:
 	rm -rf $(BIN)/*
@@ -16,3 +16,6 @@ touch:
 
 cat:
 	$(CC) $(SRC)/cat/main.c -o $(BIN)/cat $(CFLAGS)
+
+cp:
+	$(CC) $(SRC)/cp/main.c -o $(BIN)/cp $(CFLAGS)
