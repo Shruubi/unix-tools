@@ -8,11 +8,17 @@ Implemented
 
 * ls
 * touch
+* cat
+* cp (need to work on copying src file permissions to dest file and directory copying)
 
 Compiling
 ---------
 
 Running `make <tool name>` is how you compile each individual tool into the `/bin` directory.
+
+Running `make` will build all tools (plus dSYM) into the `/bin` directory.
+
+Running `make clean` will delete all built files.
 
 Currently the compiler that I have tested on is as follows:
 
