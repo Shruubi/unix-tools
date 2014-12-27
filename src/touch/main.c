@@ -13,7 +13,7 @@ main(int argc, char* argv[])
         if(pathname == NULL)
                 exit(-1);
 
-        fd = open(pathname, O_CREAT);
+        fd = open(pathname, O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
         int err = errno;
         if(err != 0)
                 exit(-1);

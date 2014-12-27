@@ -37,8 +37,11 @@ main(int argc, char* argv[])
 
         char* buff = (char*)malloc(src_filesize);
         
-        read(src_fd, buff, src_filesize);
-        write(dest_fd, buff, src_filesize);
+        int read_res = read(src_fd, buff, src_filesize);
+        int write_res = write(dest_fd, buff, src_filesize);
+
+	if(read_res == -1 || write_res == -1)
+		exit(-1);
        
         int err = errno;
         fsync(dest_fd);

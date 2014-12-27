@@ -29,7 +29,10 @@ main(int argc, char* argv[])
 
         char* buff = (char*)malloc(filesize);
 
-        read(fd, buff, filesize);
+        int read_res = read(fd, buff, filesize);
+
+	if(read_res == -1)
+		exit(-1);
 
         for(int i = 0; i < filesize; i++) {
                 printf("%c", buff[i]);

@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-Iincludes/ -g -Wall -O3
+CFLAGS=-Iincludes/ -g -Wall -O3 -std=c99
 SRC=./src
 BIN=./bin
 
