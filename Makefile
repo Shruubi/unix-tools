@@ -1,4 +1,4 @@
-CC=clang
+CC=gcc
 CFLAGS=-Iincludes/ -g -Wall -O3
 SRC=./src
 BIN=./bin
