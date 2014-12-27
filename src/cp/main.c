@@ -34,6 +34,7 @@ main(int argc, char* argv[])
                 exit(-1);
 
         size_t src_filesize = src_stat.st_size;
+        mode_t file_mode = src_stat.st_mode;
 
         char* buff = (char*)malloc(src_filesize);
         
@@ -48,6 +49,9 @@ main(int argc, char* argv[])
         printf("fsync errno: %d\n", err);
 
         err = errno;
+
+        /* now update the destination file to mirror permissions */
+        fchmod(dest_fd, file_mode);
 
         close(dest_fd);
         close(src_fd);
