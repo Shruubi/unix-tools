@@ -46,7 +46,6 @@ main(int argc, char* argv[])
        
         int err = errno;
         fsync(dest_fd);
-        printf("fsync errno: %d\n", err);
 
         err = errno;
 
